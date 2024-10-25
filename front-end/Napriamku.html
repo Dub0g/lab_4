@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="napriamku.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <img src="/img/logo.jpg" alt="Logo" width="100px" class="photo">
+        <h1>SunTravel</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html#">Головна</a></li>
+                <li>
+                    <a href="./Napriamku.html">Напрямки</a>
+                    <ul>
+                        <li><a href="./Napriamku.html#travel50k">Подорожі до 50 тисяч</a></li>
+                        <li><a href="./Napriamku.html#travel200k">Подорожі до 200 тисяч</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./kontaktu.html">Контакти</a></li>
+                <li><a href="./Vidgyku.html">Відгуки</a></li>
+                <li><button onclick="openModal()">Рестрація</button>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+     <!-- Main Section -->
+       
+                   
+     <section class="countries">
+        <section id="travel50k">
+        <p> Поїздки до 50 тисяч гривень</p>
+        <div class="grid-container">
+            <div class="country">
+                <img class="img" id="first" src="./img/egypt.jpg" alt="Єгипет" style="height: 96%;">
+                <div class="overlay" >
+                    <h2>Єгипет</h2>
+                    <p>від 42 540 грн</p>
+                </div>
+            </div>
+            <div class="country">
+                
+                <img class="img" src="./img/Turkish.jpg" alt="Туреччина" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Туреччина</h2>
+                    <p>від 34 582 грн</p>
+
+                </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/greece.jpg" alt="Греція" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Греція</h2>
+                    <p>від 38 381 грн</p>
+
+                </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img"  src="./img/spain.jpg" alt="Іспанія" style="height: 96%;">
+                <div class="overlay" >
+                    <h2>Іспанія</h2>
+                    <p>від 36 735 грн</p>
+
+                </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/uae.jpg" alt="ОАЕ" style="height: 96%;">
+                <div class="overlay">
+                    <h2>ОАЕ</h2>
+                    <p>від 49 718 грн</p>
+
+                </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/bulgaria.jpg" alt="Болгарія" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Болгарія</h2>
+                    <p>від 44 376 грн</p>
+            </div>
+        </div>
+
+    </div>
+    </section>
+    <section id="travel200k">
+        <p > Поїздки до 200 тисяч гривень</p>
+
+
+        <div class="grid-container">
+            <div class="country">
+
+                <img class="img" src="./img/japen.jpg" alt="Японія" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Японія</h2>
+                    <p>від 150 880 грн</p>
+            </div>    
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/australia.jpg" alt="Австралія" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Австралія</h2>
+                    <p>від 180 220 грн</p>
+            </div>  
+            </div>   
+
+            <div class="country">
+
+                <img class="img" src="./img/swetherlend.jpg" alt="Швейцарія" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Швейцарія</h2>
+                    <p>від 135 003 грн</p>
+            </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/UK.jpg" alt="uk" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Велика Британія</h2>
+                    <p>від 80 455 грн</p>
+            </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/brazil.jpg" alt="brazil" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Бразилія</h2>
+                    <p>від 93 455 грн</p>
+            </div>
+            </div>
+
+            <div class="country">
+
+                <img class="img" src="./img/seyshel.jpg.webp" alt="seyshel" style="height: 96%;">
+                <div class="overlay">
+                    <h2>Сейшелові острова</h2>
+                    <p>від 170 455 грн</p>
+            </div>
+            </div>
+
+        </div>
+        
+    </section>
+    </section>
+
+
+     <!-- Footer -->
+    <footer>
+        <p> Подорожуйте разом з нами</p>
+    </footer>
+   
+    <div id="modalWindow" class="modal">
+        <div onclick="openModal()" class="modal-content">
+            <div class="register-container">
+                <h1>Реєстрація</h1>
+                <form>
+                    <div class="input-group">
+                        <label for="username">Логін:</label>
+                        <input type="text" id="username" name="username" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Підтвердіть пароль:</label>
+                        <input type="password" id="confirm-password" name="confirm_password" required="">
+                    </div>
+                    <button id="endRees" class="register-button">Зареєструватись</button>
+                </form>
+            </div>
+        </div> 
+    </div>
+    <button id="scrollTop" title="Наверх">↑</button>
+</body>
+<script >
+    window.onscroll = function() {
+        var scrollTopButton = document.getElementById("scrollTop");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+        } else {
+            scrollTopButton.style.display = "none";
+        }
+    };
+    
+    document.getElementById('scrollTop').onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let modal = document.getElementById("modalWindow");
+let modalBack = document.getElementsByClassName("modal-content")[0];
+let end = document.getElementById("endRees");
+
+function openModal() {
+modal.style.display = "flex";
+}
+function closeModal() {
+modal.style.display = "none";
+}
+
+window.onclick = function (event){
+if(event.target == modal || event.target == modalBack || event.target == end) {
+    closeModal()
+}
+
+}
+</script>
+</html>

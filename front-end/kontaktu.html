@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <img src="/img/logo.jpg" alt="Logo" width="100px" class="photo">
+        <h1>Toris ther Good</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html#">Головна</a></li>
+                <li>
+                    <a href="./Napriamku.html">Напрямки</a>
+                    <ul>
+                        <li><a href="./Napriamku.html#travel50k">Подорожі до 50 тисяч</a></li>
+                        <li><a href="./Napriamku.html#travel200k">Подорожі до 200 тисяч</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./kontaktu.html">Контакти</a></li>
+                <li><a href="./Vidgyku.html">Відгуки</a></li>
+                <li><button onclick="openModal()">Рестрація</button>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Section -->
+
+
+<div class="contact-info">
+    <h1>Контакти</h1>
+    <div class="image-container">
+        <img src="img/1.jpg" alt="Travel Image" class="background-image">
+        <div class="overlay-text">Текст про зображення</div>
+    </div>
+    <p><strong>Адреса офісу:</strong> м. Київ, вул. Хрещатик, 10</p>
+    <p><strong>Телефон:</strong> +380 (44) 123-45-67</p>
+    <p><strong>Електронна пошта:</strong> <a href="mailto:info@suntravel.ua">info@suntravel.ua</a></p>
+    <p><strong>Графік роботи:</strong></p>
+    <ul>
+        <li>Пн-Пт: 09:00 – 18:00</li>
+        <li>Сб: 10:00 – 14:00</li>
+        <li>Нд – вихідний</li>
+    </ul>
+
+    <div class="social-links">
+        <strong>Ми в соціальних мережах:</strong><br>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+    </div>
+
+    <div class="map">
+        <h2>Знайти нас на мапі</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2649.6847757421947!2d30.51758521567134!3d50.45049897947592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf58d368998f%3A0x32f8f35300d30a0!2sKhreshchatyk%20St%2C%20Kyiv%2C%20Ukraine%2C%2002018!5e0!3m2!1sen!2sua!4v1697814066929!5m2!1sen!2sua" 
+            allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p> Подорожуйте разом з нами</p>
+</footer>
+<div id="modalWindow" class="modal">
+    <div onclick="openModal()" class="modal-content">
+        <div class="register-container">
+            <h1>Реєстрація</h1>
+            <form>
+                <div class="input-group">
+                    <label for="username">Логін:</label>
+                    <input type="text" id="username" name="username" required="">
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required="">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Підтвердіть пароль:</label>
+                    <input type="password" id="confirm-password" name="confirm_password" required="">
+                </div>
+                <button id="endRees" class="register-button">Зареєструватись</button>
+            </form>
+        </div>
+    </div> 
+</div>
+<button id="scrollTop" title="Наверх">↑</button>
+</body>
+<script >
+    window.onscroll = function() {
+        var scrollTopButton = document.getElementById("scrollTop");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+        } else {
+            scrollTopButton.style.display = "none";
+        }
+    };
+    
+    document.getElementById('scrollTop').onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let modal = document.getElementById("modalWindow");
+let modalBack = document.getElementsByClassName("modal-content")[0];
+let end = document.getElementById("endRees");
+
+function openModal() {
+modal.style.display = "flex";
+}
+function closeModal() {
+modal.style.display = "none";
+}
+
+window.onclick = function (event){
+if(event.target == modal || event.target == modalBack || event.target == end) {
+    closeModal()
+}
+
+}
+</script>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туристична фірма</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="./img/logo.jpg" alt="Logo" width="100px" class="photo" >
+            <h1>SunTravel</h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html#">Головна</a></li>
+                    <li>
+                        <a href="./Napriamku.html">Напрямки</a>
+                        <ul>
+                            <li><a href="./Napriamku.html#travel50k">Подорожі до 50 тисяч</a></li>
+                            <li><a href="./Napriamku.html#travel200k">Подорожі до 200 тисяч</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="./kontaktu.html">Контакти</a></li>
+                    <li><a href="./Vidgyku.html">Відгуки</a></li>
+                    <li><button onclick="openModal()">Рестрація</button>
+                            
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="intro">
+            <h2>Відкрий для себе нові горизонти</h2>
+            <p>Ми пропонуємо подорожі до найкращих напрямків світу. Обирай свій тур і вирушай у подорож мрії!</p>
+            <a href="#" class="btn">Дізнатись більше</a>
+        </section>
+
+        <section class="destinations">
+            <h2>Наші популярні напрямки</h2>
+            <div class="destination-grid">
+                <div class="destination">
+                    <img src="/img/images_p2.webp" alt="США">
+                    <h3>США</h3>
+                    <p>Насолоджуйтесь містами, пляжами та культурою.</p>
+                </div>
+                <div class="destination">
+                    <img src="/img/kanada.jpg" alt="Канада">
+                    <h3>Канада</h3>
+                    <p>Відвідайте мальовничі краєвиди і природні парки.</p>
+                </div>
+                <div class="destination">
+                    <img src="/img/Mexico.jpg" alt="Мексика">
+                    <h3>Мексика</h3>
+                    <p>Зануртесь у колоритну культуру та архітектуру.</p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p> Подорожуйте разом з нами</p>
+    </footer>
+    <button id="scrollTop" title="Наверх">↑</button>
+
+    <div id="modalWindow" class="modal">
+        <div onclick="openModal()" class="modal-content">
+            <div class="register-container">
+                <h1>Реєстрація</h1>
+                <form>
+                    <div class="input-group">
+                        <label for="username">Логін:</label>
+                        <input type="text" id="username" name="username" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Підтвердіть пароль:</label>
+                        <input type="password" id="confirm-password" name="confirm_password" required="">
+                    </div>
+                    <button id="endRees" class="register-button">Зареєструватись</button>
+                </form>
+            </div>
+        </div> 
+    </div>
+
+</body>
+<script >
+        window.onscroll = function() {
+            var scrollTopButton = document.getElementById("scrollTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopButton.style.display = "block";
+            } else {
+                scrollTopButton.style.display = "none";
+            }
+        };
+        
+        document.getElementById('scrollTop').onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        let modal = document.getElementById("modalWindow");
+let modalBack = document.getElementsByClassName("modal-content")[0];
+let end = document.getElementById("endRees");
+
+function openModal() {
+    modal.style.display = "flex";
+}
+function closeModal() {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event){
+    if(event.target == modal || event.target == modalBack || event.target == end) {
+        closeModal()
+    }
+    
+}
+</script>
+</html>

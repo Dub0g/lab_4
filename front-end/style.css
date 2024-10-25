@@ -1,0 +1,461 @@
+:root {
+    --color1: #ffff;
+    --color2: #232323;
+    --text: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+.container {
+    flex: 1; 
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2em;
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a,
+button {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+button:hover {
+    color: #00bcd4;
+}
+
+nav ul li button {
+    background-color: #333;
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 16px;
+    height: 100%;
+}
+
+/* Main Section */
+main {
+    padding: 20px 0;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 0;
+    background: url('travel.jpg') no-repeat center center/cover;
+    color: var(--color1);
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    color: #000;
+}
+
+.intro p {
+    color: #000;
+    font-size: 1.25em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    transition: .4s ease-in-out;
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #008cba;
+}
+
+.destinations {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.destination img:hover {
+    border-radius: 30px;
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+.destinations h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.destination-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.destination {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.destination h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.destination p {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; 
+}
+
+footer p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.photo {
+    border-radius: 30px;
+}
+
+#trips {
+    margin-left: 15px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%; /* Dropdown menu appears below the main */
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul ul li {
+    display: block; /* Dropdown items in vertical layout */
+}
+
+nav ul ul li a {
+    padding: 10px 20px;
+    color: #333;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+    background-color: #555;
+}
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: none;
+    transform: translate(-50%);
+    left: 50%;
+    height: max-content;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+}
+
+.register-container {
+    background-color: #f4f4f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.register-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.register-button:hover {
+    background-color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color2);
+    color: var(--color1);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+#scrollTop:hover {
+    background-color: #00bcd4;
+    transform: scale(1.1);
+    opacity: 1;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: filter 0.5s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.image-container:hover .background-image {
+    filter: brightness(1);
+}
+
+.image-container:hover .overlay-text {
+    opacity: 0;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .destination-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .intro h2 {
+        font-size: 2em;
+    }
+
+    .destinations h2 {
+        font-size: 1.5em;
+    }
+
+    .destination {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 5px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .intro h2, .destinations h2 {
+        font-size: 1.5em;
+    }
+
+    .destination img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <img src="/img/logo.jpg" alt="Logo" width="100px" class="photo">
+        <h1>SunTravel</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html#">Головна</a></li>
+                <li>
+                    <a href="./Napriamku.html">Напрямки</a>
+                    <ul>
+                        <li><a href="./Napriamku.html#travel50k">Подорожі до 50 тисяч</a></li>
+                        <li><a href="./Napriamku.html#travel200k">Подорожі до 200 тисяч</a></li>
+                    </ul>
+                </li>
+                <li><a href="./kontaktu.html">Контакти</a></li>
+                <li><a href="./Vidgyku.html">Відгуки</a></li>
+                <li><button onclick="openModal()">Рестрація</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Section -->
+<main>
+    <section class="review-section container mt-5">
+        <h2 class="text-center">Відгуки</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Іван Петров</h3>
+                        <p class="card-text">"Чудова подорож! Організація на найвищому рівні, буду звертатися ще!"</p>
+                        <p class="rating">Оцінка: ★★★★★</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Олена Сидоренко</h3>
+                        <p class="card-text">"Відмінний сервіс і приємний персонал. Враження залишились тільки позитивні."</p>
+                        <p class="rating">Оцінка: ★★★★☆</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review-form container mt-5">
+        <h2>Залишити відгук</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="review">Ваш відгук:</label>
+                <textarea class="form-control" id="review" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+        </form>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>Подорожуйте разом з нами</p>
+</footer>
+<button id="scrollTop" title="Наверх">↑</button>
+<div id="modalWindow" class="modal">
+    <div onclick="openModal()" class="modal-content">
+        <div class="register-container">
+            <h1>Реєстрація</h1>
+            <form>
+                <div class="input-group">
+                    <label for="username">Логін:</label>
+                    <input type="text" id="username" name="username" required="">
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required="">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Підтвердіть пароль:</label>
+                    <input type="password" id="confirm-password" name="confirm_password" required="">
+                </div>
+                <button id="endRees" class="register-button">Зареєструватись</button>
+            </form>
+        </div>
+    </div> 
+</div>
+<script>
+    window.onscroll = function() {
+        var scrollTopButton = document.getElementById("scrollTop");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+        } else {
+            scrollTopButton.style.display = "none";
+        }
+    };
+
+    document.getElementById('scrollTop').onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    let modal = document.getElementById("modalWindow");
+    let modalBack = document.getElementsByClassName("modal-content")[0];
+    let end = document.getElementById("endRees");
+
+    function openModal() {
+        modal.style.display = "flex";
+    }
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event){
+        if(event.target == modal || event.target == modalBack || event.target == end) {
+            closeModal()
+        }
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

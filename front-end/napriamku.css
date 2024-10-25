@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.countries {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr); /* Три колонки */
+    gap: 30px; /* Відстань між картинками */
+    justify-items: center; /* Вирівнювання по центру */
+    padding: 20px;
+    max-width: 1200px; /* Обмеження ширини контейнера */
+    margin: 0 auto; /* Центрування контейнера */
+}
+
+.country {
+    width: 100%;
+    max-width: 350px; /* Максимальна ширина для кожної країни */
+    position: relative;
+}
+
+.country img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.overlay h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.overlay p {
+    font-size: 1em;
+}
+
+.all-countries {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.all-countries:hover {
+    text-decoration: underline;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 150px; /* Збільшіть цей показник для більшої відстані між блоками */
+    justify-items: center;
+    padding: 20px;
+}
+
